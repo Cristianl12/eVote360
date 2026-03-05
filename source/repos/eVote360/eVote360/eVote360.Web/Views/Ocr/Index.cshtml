@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Validación OCR";
+}
+
+<h2>Validación de Cédula (OCR)</h2>
+
+<form asp-action="Index" method="post" enctype="multipart/form-data" class="mt-3">
+    <div class="form-group">
+        <label>Seleccione una imagen:</label>
+        <input type="file" name="imagen" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Procesar Imagen</button>
+</form>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger mt-3">@ViewBag.Error</div>
+}
+
+@if (ViewBag.TextoLeido != null)
+{
+    <div class="alert alert-success mt-3">
+        <strong>Texto Detectado:</strong>
+        <pre>@ViewBag.TextoLeido</pre>
+    </div>
+}
+

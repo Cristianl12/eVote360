@@ -1,0 +1,35 @@
+﻿@model eVote360.Domain.Entities.Voto
+@using Microsoft.AspNetCore.Mvc.Rendering
+@inject Microsoft.AspNetCore.Identity.UserManager<Microsoft.AspNetCore.Identity.IdentityUser> UserManager
+
+<h2>Registrar Voto</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-warning">@TempData["Error"]</div>
+}
+
+<form asp-action="Crear" method="post">
+    <div class="form-group">
+        <label>Ciudadano</label>
+        <input class="form-control" value="@(ViewBag.CiudadanoNombre ?? "No registrado")" readonly />
+    </div>
+
+    <div class="form-group">
+        <label>Candidato</label>
+        <select asp-for="CandidatoId" class="form-control"
+                asp-items="@(new SelectList(ViewBag.Candidatos, "Id", "NombreCompleto"))"></select>
+    </div>
+
+    <div class="form-group">
+        <label>Elección</label>
+        <select asp-for="EleccionId" class="form-control"
+                asp-items="@(new SelectList(ViewBag.Elecciones, "Id", "Nombre"))"></select>
+    </div>
+
+    <button type="submit" class="btn btn-success mt-2">Votar</button>
+    <a asp-action="Index" class="btn btn-secondary mt-2">Cancelar</a>
+</form>
+
+
+

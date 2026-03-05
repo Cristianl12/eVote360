@@ -1,0 +1,28 @@
+﻿@model IEnumerable<eVote360.Domain.Entities.Voto>
+
+<h2>Votos Registrados</h2>
+<a asp-action="Crear" class="btn btn-primary mb-3">Registrar Voto</a>
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Candidato</th>
+            <th>Elección</th>
+            <th>Fecha</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var v in Model)
+        {
+            <tr>
+                <td>@v.CandidatoId</td>
+                <td>@v.EleccionId</td>
+                <td>@v.FechaVoto</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-controller="Home" asp-action="Index" class="btn btn-secondary mt-3">Volver al inicio</a>
+

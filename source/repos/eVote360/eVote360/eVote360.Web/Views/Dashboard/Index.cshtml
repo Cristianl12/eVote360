@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Panel de Administración";
+    var resultados = ViewBag.Resultados as IEnumerable<eVote360.Application.ViewModels.ResultadoViewModel>;
+}
+
+<h2 class="mb-4">📊 Panel de Administración</h2>
+
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card text-center bg-primary text-white shadow">
+            <div class="card-body">
+                <h4>@ViewBag.TotalCiudadanos</h4>
+                <p>Ciudadanos</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-center bg-success text-white shadow">
+            <div class="card-body">
+                <h4>@ViewBag.TotalCandidatos</h4>
+                <p>Candidatos</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-center bg-warning text-dark shadow">
+            <div class="card-body">
+                <h4>@ViewBag.TotalElecciones</h4>
+                <p>Elecciones</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-center bg-danger text-white shadow">
+            <div class="card-body">
+                <h4>@ViewBag.TotalVotos</h4>
+                <p>Votos Emitidos</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3 class="mt-5">Resultados por Candidato</h3>
+<canvas id="graficaResultados" height="100"></canvas>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('graficaResultados').getContext('2d');
+        const labels = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(resultados.Select(r => r.Candidato)));
+        const data = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(resultados.Select(r => r.CantidadVotos)));
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Votos',
+                    data: data,
+                    backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+    </script>
+}
+

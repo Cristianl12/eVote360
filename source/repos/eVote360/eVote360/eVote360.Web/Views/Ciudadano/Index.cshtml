@@ -1,0 +1,37 @@
+﻿@model IEnumerable<eVote360.Domain.Entities.Ciudadano>
+
+@{
+    ViewData["Title"] = "Lista de Ciudadanos";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<a class="btn btn-primary" asp-action="Crear">Agregar Ciudadano</a>
+
+
+
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Cédula</th>
+            <th>Dirección</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.NombreCompleto</td>
+                <td>@c.Cedula</td>
+                <td>@c.Direccion</td>
+                <td>
+                    <a asp-action="Editar" asp-route-id="@c.Id" class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-action="Eliminar" asp-route-id="@c.Id" class="btn btn-sm btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

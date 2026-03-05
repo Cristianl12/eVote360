@@ -1,0 +1,43 @@
+﻿@model eVote360.Domain.Entities.Candidato
+@using Microsoft.AspNetCore.Mvc.Rendering
+
+<h2>Registrar Candidato</h2>
+
+<!-- Mostrar errores del modelo -->
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form asp-action="Crear" asp-controller="Candidato" method="post">
+    <div class="form-group">
+        <label>Nombre completo</label>
+        <input asp-for="NombreCompleto" class="form-control" />
+        <span asp-validation-for="NombreCompleto" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Cargo</label>
+        <input asp-for="Cargo" class="form-control" />
+        <span asp-validation-for="Cargo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Partido</label>
+        <select asp-for="PartidoId" class="form-control"
+                asp-items="@(new SelectList(ViewBag.Partidos, "Id", "Nombre"))" required>
+            <option value="">-- Seleccione un partido --</option>
+        </select>
+        <span asp-validation-for="PartidoId" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Guardar</button>
+    <a asp-action="Index" asp-controller="Candidato" class="btn btn-secondary mt-3">Cancelar</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
+
+

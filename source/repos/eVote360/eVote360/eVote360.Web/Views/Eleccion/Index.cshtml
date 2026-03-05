@@ -1,0 +1,28 @@
+﻿@model IEnumerable<eVote360.Domain.Entities.Eleccion>
+
+<h2>Listado de Elecciones</h2>
+<a asp-action="Crear" class="btn btn-primary mb-3">Nueva Elección</a>
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Fecha</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var e in Model)
+        {
+            <tr>
+                <td>@e.Nombre</td>
+                <td>@e.Fecha.ToShortDateString()</td>
+                <td>@e.Descripcion</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

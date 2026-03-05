@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Tesseract" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\eVote360.Application\eVote360.Application.csproj" />
+    <ProjectReference Include="..\eVote360.Domain\eVote360.Domain.csproj" />
+    <ProjectReference Include="..\eVote360.Persistence\eVote360.Persistence.csproj" />
+    <ProjectReference Include="..\eVote360.Shared\eVote360.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="OCR\" />
+  </ItemGroup>
+
+</Project>

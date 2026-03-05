@@ -1,0 +1,25 @@
+﻿@model eVote360.Domain.Entities.Partido
+
+<h2>Agregar Partido</h2>
+
+<form asp-action="Crear" method="post">
+    <div class="form-group">
+        <label>Nombre</label>
+        <input asp-for="Nombre" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Siglas</label>
+        <input asp-for="Siglas" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Logo (URL)</label>
+        <input asp-for="LogoUrl" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-success mt-2">Guardar</button>
+    <a asp-action="Index" class="btn btn-secondary mt-2">Cancelar</a>
+</form>
+
+

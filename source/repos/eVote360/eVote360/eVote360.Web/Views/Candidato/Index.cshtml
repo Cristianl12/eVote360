@@ -1,0 +1,28 @@
+﻿@model IEnumerable<eVote360.Domain.Entities.Candidato>
+
+<h2>Listado de Candidatos</h2>
+<a asp-action="Crear" class="btn btn-primary mb-3">Agregar Candidato</a>
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Cargo</th>
+            <th>Partido</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.NombreCompleto</td>
+                <td>@c.Cargo</td>
+                <td>@c.Partido?.Nombre</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

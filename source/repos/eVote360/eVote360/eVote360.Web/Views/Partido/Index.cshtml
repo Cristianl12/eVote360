@@ -1,0 +1,31 @@
+﻿@model IEnumerable<eVote360.Domain.Entities.Partido>
+
+<h2>Listado de Partidos</h2>
+<a asp-action="Crear" class="btn btn-primary mb-3">Agregar Partido</a>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Siglas</th>
+            <th>Logo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Nombre</td>
+                <td>@p.Siglas</td>
+                <td>@p.LogoUrl</td>
+                <td>
+                    <a asp-action="Eliminar" asp-route-id="@p.Id" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

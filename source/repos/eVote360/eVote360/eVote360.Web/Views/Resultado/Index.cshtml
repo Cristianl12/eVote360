@@ -1,0 +1,61 @@
+﻿@model IEnumerable<eVote360.Application.ViewModels.ResultadoViewModel>
+
+@{
+    ViewData["Title"] = "Resultados Electorales";
+}
+
+<h2 class="mb-4">@ViewData["Title"]</h2>
+
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Candidato</th>
+            <th>Elección</th>
+            <th>Cantidad de Votos</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var r in Model)
+        {
+            <tr>
+                <td>@r.Candidato</td>
+                <td>@r.Eleccion</td>
+                <td>@r.CantidadVotos</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<hr />
+
+<h3 class="mt-4">Gráfica de Resultados</h3>
+<canvas id="graficaVotos" width="400" height="200"></canvas>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('graficaVotos').getContext('2d');
+
+        const labels = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.Select(m => m.Candidato)));
+        const data = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.Select(m => m.CantidadVotos)));
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Cantidad de Votos',
+                    data: data,
+                    borderWidth: 1,
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)'
+                }]
+            },
+            options: {
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+    </script>
+}
+
