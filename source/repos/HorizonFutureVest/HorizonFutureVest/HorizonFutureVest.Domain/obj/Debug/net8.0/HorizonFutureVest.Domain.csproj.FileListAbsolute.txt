@@ -1,0 +1,11 @@
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Domain\bin\Debug\net8.0\HorizonFutureVest.Domain.deps.json
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Domain\bin\Debug\net8.0\HorizonFutureVest.Domain.dll
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Domain\bin\Debug\net8.0\HorizonFutureVest.Domain.pdb
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Domain\obj\Debug\net8.0\HorizonFutureVest.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Domain\obj\Debug\net8.0\HorizonFutureVest.Domain.AssemblyInfoInputs.cache
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Domain\obj\Debug\net8.0\HorizonFutureVest.Domain.AssemblyInfo.cs
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Domain\obj\Debug\net8.0\HorizonFutureVest.Domain.csproj.CoreCompileInputs.cache
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Domain\obj\Debug\net8.0\HorizonFutureVest.Domain.dll
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Domain\obj\Debug\net8.0\refint\HorizonFutureVest.Domain.dll
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Domain\obj\Debug\net8.0\HorizonFutureVest.Domain.pdb
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Domain\obj\Debug\net8.0\ref\HorizonFutureVest.Domain.dll

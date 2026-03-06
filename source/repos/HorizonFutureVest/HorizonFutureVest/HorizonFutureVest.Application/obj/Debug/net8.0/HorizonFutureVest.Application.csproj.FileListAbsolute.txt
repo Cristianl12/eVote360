@@ -1,0 +1,15 @@
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Application\bin\Debug\net8.0\HorizonFutureVest.Application.deps.json
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Application\bin\Debug\net8.0\HorizonFutureVest.Application.dll
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Application\bin\Debug\net8.0\HorizonFutureVest.Application.pdb
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Application\bin\Debug\net8.0\HorizonFutureVest.Domain.dll
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Application\bin\Debug\net8.0\HorizonFutureVest.Domain.pdb
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Application\obj\Debug\net8.0\HorizonFutureVest.Application.csproj.AssemblyReference.cache
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Application\obj\Debug\net8.0\HorizonFutureVest.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Application\obj\Debug\net8.0\HorizonFutureVest.Application.AssemblyInfoInputs.cache
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Application\obj\Debug\net8.0\HorizonFutureVest.Application.AssemblyInfo.cs
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Application\obj\Debug\net8.0\HorizonFutureVest.Application.csproj.CoreCompileInputs.cache
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Application\obj\Debug\net8.0\HorizonF.79D7F426.Up2Date
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Application\obj\Debug\net8.0\HorizonFutureVest.Application.dll
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Application\obj\Debug\net8.0\refint\HorizonFutureVest.Application.dll
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Application\obj\Debug\net8.0\HorizonFutureVest.Application.pdb
+C:\Users\18294\source\repos\HorizonFutureVest\HorizonFutureVest\HorizonFutureVest.Application\obj\Debug\net8.0\ref\HorizonFutureVest.Application.dll
