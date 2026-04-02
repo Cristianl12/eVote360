@@ -1,4 +1,4 @@
-﻿using eVote360.Domain.Entities;
+using eVote360.Domain.Entities;
 using eVote360.Domain.Repositories;
 using System;
 using System.Collections.Generic;
@@ -29,13 +29,18 @@ namespace eVote360.Application.Services
 
         public async Task EliminarAsync(Guid id)
         {
+            Console.WriteLine($"[PartidoService] Iniciando eliminación del partido con Id: {id}");
             var partido = await _partidoRepository.GetByIdAsync(id);
             if (partido != null)
             {
                 _partidoRepository.Delete(partido);
                 await _unitOfWork.SaveChangesAsync();
+                Console.WriteLine($"[PartidoService] Partido eliminado correctamente - Id: {id}");
+            }
+            else
+            {
+                Console.WriteLine($"[PartidoService] ADVERTENCIA: No se encontró partido para eliminar con Id: {id}");
             }
         }
     }
 }
-
