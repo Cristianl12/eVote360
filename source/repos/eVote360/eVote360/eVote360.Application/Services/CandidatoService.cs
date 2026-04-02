@@ -1,11 +1,10 @@
-﻿using eVote360.Domain.Entities;
+using eVote360.Domain.Entities;
 using eVote360.Domain.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using eVote360.Domain.Entities;
 
 namespace eVote360.Application.Services
 {
@@ -26,6 +25,14 @@ namespace eVote360.Application.Services
         {
             await _repo.AddAsync(candidato);
             await _unitOfWork.SaveChangesAsync();
+        }
+
+        public async Task ActualizarAsync(Candidato candidato)
+        {
+            Console.WriteLine($"[CandidatoService] Actualizando información del candidato - Id: {candidato.Id}");
+            _repo.Update(candidato);
+            await _unitOfWork.SaveChangesAsync();
+            Console.WriteLine($"[CandidatoService] Candidato actualizado exitosamente - Id: {candidato.Id}");
         }
     }
 }
