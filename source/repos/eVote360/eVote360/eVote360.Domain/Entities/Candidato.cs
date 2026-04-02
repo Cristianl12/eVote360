@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +13,7 @@ namespace eVote360.Domain.Entities
     public class Candidato : BaseEntity
     {
         [Required]
-        [MaxLength(100)]
+        [MaxLength(150, ErrorMessage = "El nombre no puede exceder los 150 caracteres.")]
         public string NombreCompleto { get; set; } = string.Empty;
 
         [Required]
@@ -28,5 +28,3 @@ namespace eVote360.Domain.Entities
 
     }
 }
-
-
